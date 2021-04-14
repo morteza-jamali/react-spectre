@@ -90,5 +90,8 @@
   "bugs": {
     "url": "https://github.com/morteza-jamali/react-spectre/issues"
   },
-  "homepage": "https://github.com/morteza-jamali/react-spectre#readme"
+  "homepage": "https://github.com/morteza-jamali/react-spectre#readme",
+  "dependencies": {
+    "react-fela": "^11.6.1"
+  }
 }
