@@ -1,9 +1,11 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
+import { createRenderer } from 'fela';
+import { RendererProvider } from 'react-fela';
 import { DefaultButton, IButtonProps } from '../src/.';
 
 const meta: Meta = {
-  title: 'Welcome',
+  title: 'Components/Button',
   component: DefaultButton,
   argTypes: {
     children: {
@@ -17,10 +19,18 @@ const meta: Meta = {
   },
 };
 
+const renderer = createRenderer();
+
 export default meta;
 
-const Template: Story<IButtonProps> = args => <DefaultButton {...args} />;
+const Template: Story<IButtonProps> = args => (
+  <RendererProvider renderer={renderer}>
+    <DefaultButton {...args} />
+  </RendererProvider>
+);
 
 export const Default = Template.bind({});
 
-Default.args = {};
+Default.args = {
+  text: 'Default Button',
+};
