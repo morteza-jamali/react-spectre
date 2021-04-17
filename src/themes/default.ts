@@ -1,17 +1,27 @@
-// Core features
-const rtl: boolean = false;
+import { Color, ITheme } from '../utils/.';
 
-// Core colors
-const primaryColor: string = '#5755d9';
+export const defaultTheme: ITheme = {
+  colors: {
+    primary: '#5755d9',
+    secondary: Color('#5755d9')
+      .lighten(37.5)
+      .hex(),
+    success: '#32b643',
+    warning: '#ffb700',
+    error: '#e85600',
+    dark: '#303742',
+    light: '#fff',
+    code: '#d73e48',
+    highlight: '#ffe9b3',
+  },
+  rtl: false,
+};
+
 /*$primary-color-dark: darken($primary-color, 3%) !default;
 $primary-color-light: lighten($primary-color, 3%) !default;
-$secondary-color: lighten($primary-color, 37.5%) !default;
 $secondary-color-dark: darken($secondary-color, 3%) !default;
 $secondary-color-light: lighten($secondary-color, 3%) !default;*/
 
-// Gray colors
-const darkColor: string = '#303742';
-const lightColor: string = '#fff';
 /*$gray-color: lighten($dark-color, 55%) !default;
 $gray-color-dark: darken($gray-color, 30%) !default;
 $gray-color-light: lighten($gray-color, 20%) !default;
@@ -23,14 +33,6 @@ $bg-color: lighten($dark-color, 75%) !default;
 $bg-color-dark: darken($bg-color, 3%) !default;
 $bg-color-light: $light-color !default;*/
 
-// Control colors
-const successColor: string = '#32b643';
-const warningColor: string = '#ffb700';
-const errorColor: string = '#e85600';
-
-// Other colors
-const codeColor: string = '#d73e48';
-const highlightColor: string = '#ffe9b3';
 /*$body-bg: $bg-color-light !default;
 $body-font-color: lighten($dark-color, 5%) !default;
 $link-color: $primary-color !default;
